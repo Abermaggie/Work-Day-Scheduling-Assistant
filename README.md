@@ -8,7 +8,9 @@ The assistant allows user input into each time block and once the save button is
 
 ## Visuals/Usage
 Deployed Github Website: https://abermaggie.github.io/Work-Day-Scheduling-Assistant/
-Screen Shot #1 (Deployed Website)
+Screen Shot #1 (Deployed Website):
+<img width="911" alt="image" src="https://user-images.githubusercontent.com/114010430/201751068-7d140bd9-b082-43a2-a1dc-986a2fcb370a.png">
+
 
 Video #1 (Current date/time feature in header, conditional coloring of time blocks):
 https://drive.google.com/file/d/1cyknmUqnTtG6l3erEFWfCVH02bkraGTl/view
