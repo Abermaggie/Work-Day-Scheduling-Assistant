@@ -28,40 +28,39 @@ var interval = setInterval(function() {
                         + momentNow.format('dddd').substring(0,3).toUpperCase());
     $('#currentDay').html(currentDate + " " + momentNow.format('hh:mm:ss A'));
 },100);
-console.log(interval);
 
 function initPage() {
-    var init9= JSON.parse(localStorage.getItem("09:00 am"))
+    var init9= JSON.parse(localStorage.getItem("09:00 AM"))
     blockNine.val(init9);
 
-    var init10= JSON.parse(localStorage.getItem("10:00 am"))
+    var init10= JSON.parse(localStorage.getItem("10:00 AM"))
     blockTen.val(init10);
 
-    var init11= JSON.parse(localStorage.getItem("11:00 am"))
+    var init11= JSON.parse(localStorage.getItem("11:00 AM"))
     blockEleven.val(init11);
 
-    var init12= JSON.parse(localStorage.getItem("12:00 pm"))
+    var init12= JSON.parse(localStorage.getItem("12:00 PM"))
     blockTwelve.val(init12);
 
-    var init1= JSON.parse(localStorage.getItem("01:00 pm"))
+    var init1= JSON.parse(localStorage.getItem("01:00 PM"))
     blockOne.val(init1);
 
-    var init2= JSON.parse(localStorage.getItem("02:00 pm"))
+    var init2= JSON.parse(localStorage.getItem("02:00 PM"))
     blockTwo.val(init2);
 
-    var init3= JSON.parse(localStorage.getItem("03:00 pm"))
+    var init3= JSON.parse(localStorage.getItem("03:00 PM"))
     blockThree.val(init3);
 
-    var init4= JSON.parse(localStorage.getItem("04:00 pm"))
+    var init4= JSON.parse(localStorage.getItem("04:00 PM"))
     blockFour.val(init4);
 
-    var init5= JSON.parse(localStorage.getItem("05:00 pm"))
+    var init5= JSON.parse(localStorage.getItem("05:00 PM"))
     blockFive.val(init5);
 
-    var init6= JSON.parse(localStorage.getItem("06:00 pm"))
+    var init6= JSON.parse(localStorage.getItem("06:00 PM"))
     blockSix.val(init6);
 
-    var init7= JSON.parse(localStorage.getItem("07:00 pm"))
+    var init7= JSON.parse(localStorage.getItem("07:00 PM"))
     blockSeven.val(init7);
 }
 
@@ -83,6 +82,6 @@ background()
 
     $(".saveBtn").on('click', function() {
         userInput = $(this).siblings(".form-control").val().trim();
-        hourspan = $(this).siblings(".input-group-prepend").text().trim();
+        hourSpan = $(this).siblings(".input-group-prepend").text().trim();
         localStorage.setItem(hourSpan, JSON.stringify(userInput));
     })
