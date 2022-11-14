@@ -1,7 +1,8 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1;
+  display:grid;
+  width: 100%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
 textarea {
@@ -18,7 +19,18 @@ textarea {
   background-color: transparent;
   color: black;
   border-radius: 0;
+}
+
+.bottomBorder {
   border-bottom: 10px solid black;
+  display:flex;
+  width:auto;
+}
+
+.container {
+  display:flex;
+  justify-content: center;
+  align-items:center;
 }
 
 .description {
