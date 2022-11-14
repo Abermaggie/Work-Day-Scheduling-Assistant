@@ -28,6 +28,7 @@ var interval = setInterval(function() {
                         + momentNow.format('dddd').substring(0,3).toUpperCase());
     $('#currentDay').html(currentDate + " " + momentNow.format('hh:mm:ss A'));
 },100);
+console.log(interval);
 
 function initPage() {
     var init9= JSON.parse(localStorage.getItem("09:00 am"))
@@ -40,7 +41,7 @@ function initPage() {
     blockEleven.val(init11);
 
     var init12= JSON.parse(localStorage.getItem("12:00 pm"))
-    blockTweleve.val(init12);
+    blockTwelve.val(init12);
 
     var init1= JSON.parse(localStorage.getItem("01:00 pm"))
     blockOne.val(init1);
@@ -76,15 +77,12 @@ function background () {
             $(this).addClass("present");
         }
         });
-}
+} 
+initPage()
+background()
 
-$(document).read(function() {
-    initPage()
-    background()
-
-    $(".saveBtn").on('click', function() => {
+    $(".saveBtn").on('click', function() {
         userInput = $(this).siblings(".form-control").val().trim();
         hourspan = $(this).siblings(".input-group-prepend").text().trim();
         localStorage.setItem(hourSpan, JSON.stringify(userInput));
     })
-})

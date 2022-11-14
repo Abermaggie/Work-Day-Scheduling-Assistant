@@ -22,6 +22,12 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+.rowContainer {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
 .description{
   white-space: pre-wrap;
 }
@@ -36,7 +42,8 @@ textarea {
 }
 
 .form-control {
-  border: none;
+  border-bottom: white;
+  background-color: rgb(47, 206, 47);
 }
 
 .row {
@@ -55,7 +62,7 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: gainsboro;
   color: white;
 }
 
