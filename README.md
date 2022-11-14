@@ -7,7 +7,7 @@ The Work Day Scheduling Assistant was created to cater to the career professiona
 The assistant allows user input into each time block and once the save button is clicked, you are able to return to this assistant and view the saved entry at any point.  Color coding of each time block introduces visual cues and stimuli so that the user is able to easily recognize past, present, and future events.
 
 ## Visuals/Usage
-Deployed Github Website:
+Deployed Github Website: https://abermaggie.github.io/Work-Day-Scheduling-Assistant/
 
 Video #1 (Current date/time feature in header, conditional coloring of time blocks):
 https://drive.google.com/file/d/1cyknmUqnTtG6l3erEFWfCVH02bkraGTl/view
