@@ -1,9 +1,5 @@
-// Opens to current day- use moment.js for the date formats.//
-// create several div boxes to make a standardized centered box in the middle.//
-    //use griding to create each of the horizontal boxes with borders to easily section off the event boxes.//
-//scroll padding to be able to go up and down.
-    // This method will allow all content to load on the page //
-// before triggering any of the jquery functions we add.//
+// Create global variables to allow access to these variables throughout document.//
+// Create all date formats using the Moment.js functionality//
 var currentDate= moment().format('dddd') + " " + moment().format("Do MMM YYYY");
 var currentHour = moment().format('h:mm:ss a');
 var blockNine= $("#9AM");
@@ -22,6 +18,7 @@ var hour= moment().hours();
 var userInput;
 var hourSpan;
 
+// Use setInterval function to increment clock at the top of page by seconds until point of minute increment and hour etc.//
 var interval = setInterval(function() {
     var momentNow= moment();
     $('#currentDay').html(momentNow.format('YYYY MMMM DD') + ' ' 
@@ -29,6 +26,8 @@ var interval = setInterval(function() {
     $('#currentDay').html(currentDate + " " + momentNow.format('hh:mm:ss A'));
 },100);
 
+// Create a variable that holds the users information in local storage for later using JSON parse.//
+// Pass the result of that function to the variable that of the corresponding block to show local storage when saved.//
 function initPage() {
     var init9= JSON.parse(localStorage.getItem("09:00 AM"))
     blockNine.val(init9);
@@ -64,6 +63,8 @@ function initPage() {
     blockSeven.val(init7);
 }
 
+// Create a function that uses the current hour to fuel an if statement referencing a specific//
+// appended class back to the CSS to establish conditional background coloring based on past, present, and future.//
 function background () {
     $(".form-control").each(function() {
         var timeTest = parseInt($(this).attr("id"));
@@ -77,9 +78,11 @@ function background () {
         }
         });
 } 
+// Call both iteration and background functions.//
 initPage()
 background()
-
+// Create an event listener to save user input to local storage upon click.//
+// hourSpan element can be used to fuel the get item in the iteration above.//
     $(".saveBtn").on('click', function() {
         userInput = $(this).siblings(".form-control").val().trim();
         hourSpan = $(this).siblings(".input-group-prepend").text().trim();

@@ -29,12 +29,18 @@
       <p id="currentDay" class="lead"></p>
     </header>
 
+    <!-- add container div to contain time blocks for more uniform frame structure. -->
     <div class="rowContainer">
+    <!-- Each row should have it's own div that contains 3 sections for hour, text, and save button -->
+    <!-- The div class containing the 3 sections should be repeated 10 times for the 9AM-7PM time slots. -->
       <div class="row">
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text hour">09:00 AM</span>
           </div>
+          <!-- Create id within form to connect to time block elements for local storage save. -->
+          <!-- Add floppy disk icon image to save button and create alt text for accessibility. -->
+          <!-- Add change of color upon hover to save button for accessibility. -->
           <textarea class ="form-control" aria-label="With textarea" id="9AM"></textarea>
           <button type="button" class="saveBtn"><img class= "floppy" src="./assets/images/floppy-save.png" alt="floppy disk, save me"></button>
         </div>
@@ -141,8 +147,12 @@
         </div>
       </div>
     </div>
+
+    <!-- jquery library is linked so that js can use jquery methods/elements. -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Moment.js has been linked so we can use the number formats contained in this library. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Link to document's javascript file for interactive functionality. -->
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

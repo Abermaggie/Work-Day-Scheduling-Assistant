@@ -21,7 +21,7 @@ textarea {
   border-radius:0;
   border-bottom: 10px solid black;
 }
-
+/* Add padding to left and right of container element to create middle of page floating effect. */
 .rowContainer {
   padding-left: 10%;
   padding-right: 10%;
@@ -60,6 +60,7 @@ textarea {
   text-align: center;
   padding: 20px;
 }
+/* Appended elements should have different colors for past, present, and future.  Which element is chosen will depend upon background function. */
 .past {
   background-color: gainsboro;
   color: white;
